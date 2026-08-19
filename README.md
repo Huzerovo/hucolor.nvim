@@ -14,7 +14,7 @@ CSS 设计变量（`examples/themes/default/assets/css`），项目结构参照
 
 | 角色 | 色值 | 来源 |
 | --- | --- | --- |
-| 背景 / 卡片 / 次级 | `#141416` `#1d1d21` `#232329` | `--hulog-bg*` |
+| 背景 / 卡片 / 次级 | `#1a1a1d` `#232329` `#292930` | `--hulog-bg*`（暗色整体提亮，与 hulog Konsole 同步） |
 | 文字 强/正文/弱/淡 | `#f1f1f4` `#c9c9cf` `#8e8e97` `#67676f` | `--hulog-text*` |
 | 靛蓝（关键字/类型） | `#a3a4ff` `#b9baff` | `--hulog-accent*` |
 | 兰花紫（数字/常量） | `#c792ea` | `--hulog-accent-visited` |

@@ -174,8 +174,8 @@ theme.loadEditor = function()
 end
 
 theme.loadTerminal = function()
-	-- 终端 ANSI 16 色（与 hulog konsole 配色一致）
-	vim.g.terminal_color_0 = hulog.bg1
+	-- 终端 ANSI 16 色（与 hulog Konsole 配色逐项一致）
+	vim.g.terminal_color_0 = hulog.black
 	vim.g.terminal_color_1 = hulog.red
 	vim.g.terminal_color_2 = hulog.green
 	vim.g.terminal_color_3 = hulog.yellow
@@ -183,14 +183,14 @@ theme.loadTerminal = function()
 	vim.g.terminal_color_5 = hulog.purple
 	vim.g.terminal_color_6 = hulog.cyan
 	vim.g.terminal_color_7 = hulog.fg0
-	vim.g.terminal_color_8 = hulog.fg3
+	vim.g.terminal_color_8 = hulog.bright_black
 	vim.g.terminal_color_9 = hulog.orange
-	vim.g.terminal_color_10 = hulog.green
-	vim.g.terminal_color_11 = hulog.yellow
+	vim.g.terminal_color_10 = hulog.bright_green
+	vim.g.terminal_color_11 = hulog.bright_yellow
 	vim.g.terminal_color_12 = hulog.blue_bright
-	vim.g.terminal_color_13 = hulog.purple
-	vim.g.terminal_color_14 = hulog.cyan
-	vim.g.terminal_color_15 = hulog.fg0
+	vim.g.terminal_color_13 = hulog.bright_purple
+	vim.g.terminal_color_14 = hulog.bright_cyan
+	vim.g.terminal_color_15 = hulog.white
 end
 
 theme.loadTreeSitter = function()
@@ -602,13 +602,13 @@ theme.loadPlugins = function()
 		MiniTestPass = { fg = hulog.green, style = bold },
 		MiniTrailspace = { bg = hulog.red },
 
-		-- headlines.nvim
-		Headline1 = { fg = hulog.orange, bg = "#28211d", style = bold },
-		Headline2 = { fg = hulog.yellow, bg = "#27211a", style = bold },
-		Headline3 = { fg = hulog.green, bg = "#19241e", style = bold },
-		Headline4 = { fg = hulog.blue, bg = "#21212b", style = bold },
-		Headline5 = { fg = hulog.purple, bg = "#241f29", style = bold },
-		Headline6 = { fg = hulog.blue_bright, bg = "#23232b", style = bold },
+		-- headlines.nvim（bg 为 bg0 与标题色的 10:1 混色，随新 bg0 重算）
+		Headline1 = { fg = hulog.orange, bg = "#2d2623", style = bold },
+		Headline2 = { fg = hulog.yellow, bg = "#2d2620", style = bold },
+		Headline3 = { fg = hulog.green, bg = "#1e2924", style = bold },
+		Headline4 = { fg = hulog.blue, bg = "#262631", style = bold },
+		Headline5 = { fg = hulog.purple, bg = "#2a2530", style = bold },
+		Headline6 = { fg = hulog.blue_bright, bg = "#282831", style = bold },
 		Quote = { fg = hulog.fg2 },
 		CodeBlock = { bg = hulog.bg1 },
 		Dash = { fg = hulog.blue, style = bold },

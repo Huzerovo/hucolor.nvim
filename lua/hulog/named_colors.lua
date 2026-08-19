@@ -3,12 +3,12 @@
 -- 暗色为默认变体；亮色对应 CSS 亮色变体
 -- red / cyan 为色板缺失色相的派生补充（与 hulog konsole 配色一致）
 local hulog = {
-	-- 背景层级（dark）
-	bg = "#141416", -- --hulog-bg
-	bg_elevated = "#1d1d21", -- --hulog-bg-elevated
-	bg_subtle = "#232329", -- --hulog-bg-subtle
-	line = "#2e2e35", -- --hulog-line
-	line_strong = "#3a3a43", -- --hulog-line-strong
+	-- 背景层级（dark，整体 +6 提亮，与 hulog Konsole 背景 #1a1a1d 同步）
+	bg = "#1a1a1d", -- 同步 Konsole Background
+	bg_elevated = "#232329", -- 同步后保持层级（旧 bg2 值）
+	bg_subtle = "#292930",
+	line = "#34343b",
+	line_strong = "#40404a",
 
 	-- 文字层级（dark）
 	text = "#c9c9cf", -- --hulog-text
@@ -31,6 +31,15 @@ local hulog = {
 	-- 派生补充（dark）：色板缺失色相
 	red = "#d9582e", -- 亮色 warm（深陶土红）
 	cyan = "#7cc6cf", -- 低饱和青，与靛蓝同冷色族
+
+	-- 终端 16 色补充（同步 hulog.konsole 亮色段；bright_black 即补全提示色）
+	black = "#5a5a64", -- Konsole Color0
+	bright_black = "#64646e", -- Konsole Color8
+	bright_green = "#6fd98a", -- Konsole Color10
+	bright_yellow = "#f0b45a", -- Konsole Color11
+	bright_purple = "#d8b4f2", -- Konsole Color13
+	bright_cyan = "#a5dae0", -- Konsole Color14
+	white = "#ffffff", -- Konsole Color15
 
 	-- 亮色变体（light，对应 CSS 亮色）
 	light_bg = "#f7f7f5",
