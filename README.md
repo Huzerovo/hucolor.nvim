@@ -2,9 +2,9 @@
 
 ## hucolor 主题（暖纸 + 靛蓝 + 陶土橙）的 Neovim 移植
 
-Neovim 配色，配色源自 [hucolor](https://github.com/huzerovo/hucolor) 博客主题的
-CSS 设计变量（`examples/themes/default/assets/css`），项目结构参照
-[shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)（MIT）。
+Neovim 配色，配色源自 [hucolor](https://github.com/huzerovo/hucolor) 的
+配色设计文档（暖纸 + 靛蓝 + 陶土橙，见 `README.md` 中的 CSS 设计变量），
+项目结构参照 [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)（GPL-2.0）。
 
 暗色为默认变体，亮色（`vim.o.background = "light"`）同样受支持。
 
@@ -14,7 +14,7 @@ CSS 设计变量（`examples/themes/default/assets/css`），项目结构参照
 
 | 角色 | 色值 | 来源 |
 | --- | --- | --- |
-| 背景 / 卡片 / 次级 | `#232328` `#2c2c34` `#32323b` | `--hucolor-bg*` 提亮应用值，bg0 与 hucolor Konsole 背景对齐 |
+| 背景 / 卡片 / 次级 | `#232328` `#2c2c34` `#32323b` | `--hucolor-bg*` 提亮应用值，bg0 即终端默认背景 |
 | 文字 强/正文/弱/淡 | `#f1f1f4` `#c9c9cf` `#8e8e97` `#67676f` | `--hucolor-text*` |
 | 靛蓝（关键字/类型） | `#a3a4ff` `#b9baff` | `--hucolor-accent*` |
 | 兰花紫（数字/常量） | `#c792ea` | `--hucolor-accent-visited` |
@@ -29,7 +29,7 @@ CSS 设计变量（`examples/themes/default/assets/css`），项目结构参照
 
 + 完整支持 Neovim 内置 LSP 诊断（新旧两代命名均有）与 TreeSitter（`TS*` 与 `@capture` 双命名）
 + 亮/暗双变体，按 `vim.o.background` 自动切换
-+ 终端 ANSI 16 色同步设置（暗色红随语义红，其余与 hucolor Konsole 配色一致）
++ 终端 ANSI 16 色同步设置（红随语义红，其余按 hucolor 语义取色）
 + 插件支持：gitsigns / gitgutter、telescope、nvim-tree、which-key、nvim-cmp、
   indent-blankline(新旧)、nvim-notify、mini.nvim、dashboard、headlines、illuminate、
   leap / hop / flash / sneak、rainbow-delimiters、ts-rainbow、aerial、navic、
@@ -128,4 +128,6 @@ vim.cmd[[colorscheme hucolor]]
 
 ## 许可
 
-MIT
+GPL-2.0
+
+参考实现 [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)（GPL-2.0）。

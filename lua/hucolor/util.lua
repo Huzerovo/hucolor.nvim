@@ -3,7 +3,13 @@ local util = {}
 local hucolor = require("hucolor.theme")
 
 -- 应用单个高亮组；兼容 style 字符串与 bold/italic 布尔写法
+-- 使用 nvim_set_hl，避免字符串拼接 vim.cmd 的转义问题
 util.highlight = function(group, color)
+	if color.link then
+		vim.api.nvim_set_hl(0, group, { link = color.link })
+		return
+	end
+
 	local style = color.style or "NONE"
 	local function add_style(name)
 		if not vim.tbl_contains(vim.split(style, ","), name) then
@@ -17,14 +23,23 @@ util.highlight = function(group, color)
 		add_style("italic")
 	end
 
-	local fg = color.fg and "guifg=" .. color.fg or "guifg=NONE"
-	local bg = color.bg and "guibg=" .. color.bg or "guibg=NONE"
-	local sp = color.sp and "guisp=" .. color.sp or ""
-
-	vim.cmd("highlight " .. group .. " gui=" .. style .. " " .. fg .. " " .. bg .. " " .. sp)
-	if color.link then
-		vim.cmd("highlight! link " .. group .. " " .. color.link)
+	local attrs = {}
+	if color.fg then
+		attrs.fg = color.fg
 	end
+	if color.bg then
+		attrs.bg = color.bg
+	end
+	if color.sp then
+		attrs.sp = color.sp
+	end
+	for _, name in ipairs(vim.split(style, ",")) do
+		if name ~= "NONE" then
+			attrs[name] = true
+		end
+	end
+
+	vim.api.nvim_set_hl(0, group, attrs)
 end
 
 -- 仅在 hucolor 仍是当前配色时保留 autocmd，切换配色后自动清理

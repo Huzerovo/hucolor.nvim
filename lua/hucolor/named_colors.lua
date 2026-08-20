@@ -1,10 +1,10 @@
 -- hucolor.nvim · 原始色板
--- 直接取自 hucolor 主题的 CSS 变量（examples/themes/default/assets/css）
+-- 直接取自 hucolor 配色设计文档的 CSS 设计变量（--hucolor-*）
 -- 暗色为默认变体；亮色对应 CSS 亮色变体
--- red / cyan 为色板缺失色相的派生补充（cyan 与 hucolor konsole 一致；red 独立取值）
+-- red / cyan 为色板缺失色相的派生补充（cyan 与靛蓝同冷色族；red 独立取值）
 local hucolor = {
-	-- 背景层级（dark，定义 = 原 CSS 层级；提亮应用，bg0 与 Konsole 背景对齐）
-	bg = "#232328", -- 提亮应用 bg0，同步 Konsole Background
+	-- 背景层级（dark，定义 = 原 CSS 层级；提亮应用，bg0 即终端默认背景）
+	bg = "#232328", -- 提亮应用 bg0，即终端默认背景
 	bg_elevated = "#2c2c34",
 	bg_subtle = "#32323b",
 	line = "#3d3d46",
@@ -32,14 +32,14 @@ local hucolor = {
 	red = "#e0554a", -- 独立取值暖红（与亮色 warm 解耦）
 	cyan = "#7cc6cf", -- 低饱和青，与靛蓝同冷色族
 
-	-- 终端 16 色补充（同步 hucolor.konsole 亮色段；bright_black 即补全提示色）
-	black = "#5a5a64", -- Konsole Color0
-	bright_black = "#64646e", -- Konsole Color8
-	bright_green = "#6fd98a", -- Konsole Color10
-	bright_yellow = "#f0b45a", -- Konsole Color11
-	bright_purple = "#d8b4f2", -- Konsole Color13
-	bright_cyan = "#a5dae0", -- Konsole Color14
-	white = "#ffffff", -- Konsole Color15
+	-- 终端 16 色补充（bright_black 即补全提示色）
+	black = "#5a5a64",
+	bright_black = "#64646e",
+	bright_green = "#6fd98a",
+	bright_yellow = "#f0b45a",
+	bright_purple = "#d8b4f2",
+	bright_cyan = "#a5dae0",
+	white = "#ffffff",
 
 	-- 亮色变体（light，对应 CSS 亮色）
 	light_bg = "#f7f7f5",

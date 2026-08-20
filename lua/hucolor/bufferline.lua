@@ -1,31 +1,28 @@
 -- hucolor.nvim · nvim-bufferline 集成
 -- 用法：require("hucolor").bufferline.highlights({ bold = true, italic = true })
-local colors = require("hucolor.colors")
-
-local setting = {
-	fill = colors.bg0,
-	indicator = colors.blue,
-	bg = colors.bg0,
-	buffer_bg = colors.bg0,
-	buffer_bg_selected = colors.bg1,
-	buffer_bg_visible = colors.bg2,
-	bold = true,
-	italic = true,
-}
-
 local M = {}
 
+local function default_setting()
+	local colors = require("hucolor.colors")
+	return {
+		fill = colors.bg0,
+		indicator = colors.blue,
+		bg = colors.bg0,
+		buffer_bg = colors.bg0,
+		buffer_bg_selected = colors.bg1,
+		buffer_bg_visible = colors.bg2,
+		bold = true,
+		italic = true,
+	}
+end
+
 M.highlights = function(new_setting)
-	if new_setting ~= nil then
-		for key, value in pairs(new_setting) do
-			setting[key] = value
-		end
-	end
+	local setting = vim.tbl_extend("force", default_setting(), new_setting or {})
 
 	local fill = setting.fill
 	local indicator = setting.indicator
 	local bg = setting.bg
-	local buffer_bg = setting.bg
+	local buffer_bg = setting.buffer_bg
 	local buffer_bg_selected = setting.buffer_bg_selected
 	local buffer_bg_visible = setting.buffer_bg_visible
 	local bold = setting.bold

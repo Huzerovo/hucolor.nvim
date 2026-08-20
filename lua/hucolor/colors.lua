@@ -59,7 +59,7 @@ local light_colors = {
 	rust = named.light_code_text,
 	mark = named.light_mark,
 
-	-- 亮色模式终端色（无亮色 Konsole 可对照，取等价语义：黑=最深文字，亮色=对应基础色）
+	-- 亮色模式终端色（无亮色终端可对照，取等价语义：黑=最深文字，亮色=对应基础色）
 	black = named.light_text_strong,
 	bright_black = named.light_text,
 	bright_green = named.light_done,

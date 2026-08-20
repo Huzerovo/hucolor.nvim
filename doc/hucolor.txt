@@ -12,7 +12,7 @@
 1. 介绍                                            *hucolor.nvim-introduction*
 
 hucolor.nvim 是 hucolor 博客主题配色（暖纸 + 靛蓝 + 陶土橙）的 Neovim 配色。
-项目结构参照 shaunsingh/nord.nvim（MIT）。
+项目结构参照 shaunsingh/nord.nvim（GPL-2.0）。
 
 支持 Neovim 内置 LSP 诊断与 TreeSitter（TS* 与 @capture 双命名），
 亮/暗双变体按 vim.o.background 自动切换。
@@ -25,6 +25,8 @@ hucolor.nvim 是 hucolor 博客主题配色（暖纸 + 靛蓝 + 陶土橙）的 
   treesitter-context、bufferline、lualine
 
 需求：Neovim >= 0.8（推荐 0.10+）。
+
+许可：GPL-2.0（参考实现 shaunsingh/nord.nvim，GPL-2.0）。
 
 ==============================================================================
 2. 安装                                            *hucolor.nvim-installation*
