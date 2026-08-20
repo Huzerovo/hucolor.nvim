@@ -49,40 +49,40 @@ Neovim 配色，配色源自 [hucolor](https://github.com/huzerovo/hucolor) 的
   lazy = false,
   priority = 1000,
   config = function()
-  -- 侧栏/浮窗使用 elevated 背景，与正文区分
-  vim.g.hucolor_contrast = true
-  -- 垂直分屏窗口显示边框
-  vim.g.hucolor_borders = true
-  -- 光标行高亮（false 则透明）
-  vim.g.hucolor_cursorline_transparent = false
-  -- diff 模式统一背景色，避免五颜六色
-  vim.g.hucolor_uniform_diff_background = true
-  -- 亮色模式，可选
-  -- vim.o.background = 'light'
+    -- 侧栏/浮窗使用 elevated 背景，与正文区分
+    vim.g.hucolor_contrast = true
+    -- 垂直分屏窗口显示边框
+    vim.g.hucolor_borders = true
+    -- 光标行高亮（false 则透明）
+    vim.g.hucolor_cursorline_transparent = false
+    -- diff 模式统一背景色，避免五颜六色
+    vim.g.hucolor_uniform_diff_background = true
+    -- 亮色模式，可选
+    -- vim.o.background = 'light'
 
-  require('hucolor').set()
+    require('hucolor').set()
 
-  -- 从调色板取色，避免硬编码
-  local hucolor = require('hucolor.colors')
+    -- 从调色板取色，避免硬编码
+    local hucolor = require('hucolor.colors')
 
-  local function apply_overrides()
-    -- WinBar 与背景统一
-    vim.api.nvim_set_hl(0, 'WinBar', { bg = hucolor.bg0, fg = hucolor.fg0 })
-    vim.api.nvim_set_hl(0, 'WinBarNC', { bg = hucolor.bg0, fg = hucolor.fg2 })
+    local function apply_overrides()
+      -- WinBar 与背景统一
+      vim.api.nvim_set_hl(0, 'WinBar', { bg = hucolor.bg0, fg = hucolor.fg0 })
+      vim.api.nvim_set_hl(0, 'WinBarNC', { bg = hucolor.bg0, fg = hucolor.fg2 })
 
-    -- 行号/当前行号
-    vim.api.nvim_set_hl(0, 'LineNr', { fg = hucolor.fg2 })
-    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = hucolor.blue, bold = true })
-  end
+      -- 行号/当前行号
+      vim.api.nvim_set_hl(0, 'LineNr', { fg = hucolor.fg2 })
+      vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = hucolor.blue, bold = true })
+    end
 
-  apply_overrides()
+    apply_overrides()
 
-  -- 切换 colorscheme 后保持 override 生效
-  vim.api.nvim_create_autocmd('ColorScheme', {
-    callback = function()
-      apply_overrides()
-    end,
-  })
+    -- 切换 colorscheme 后保持 override 生效
+    vim.api.nvim_create_autocmd('ColorScheme', {
+      callback = function()
+        apply_overrides()
+      end,
+    })
   end
 }
 ```
