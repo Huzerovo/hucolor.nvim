@@ -1,6 +1,6 @@
--- hulog.nvim · nvim-bufferline 集成
--- 用法：require("hulog").bufferline.highlights({ bold = true, italic = true })
-local colors = require("hulog.colors")
+-- hucolor.nvim · nvim-bufferline 集成
+-- 用法：require("hucolor").bufferline.highlights({ bold = true, italic = true })
+local colors = require("hucolor.colors")
 
 local setting = {
 	fill = colors.bg0,

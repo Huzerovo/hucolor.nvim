@@ -1,0 +1,97 @@
+*hucolor.nvim*                       hucolor 主题（暖纸 + 靛蓝 + 陶土橙）的 Neovim 移植
+
+==============================================================================
+目录                                                    *hucolor.nvim-contents*
+
+1. 介绍 ....................... |hucolor.nvim-introduction|
+2. 安装 ....................... |hucolor.nvim-installation|
+3. 使用 ....................... |hucolor.nvim-usage|
+4. 配置 ....................... |hucolor.nvim-configuration|
+
+==============================================================================
+1. 介绍                                            *hucolor.nvim-introduction*
+
+hucolor.nvim 是 hucolor 博客主题配色（暖纸 + 靛蓝 + 陶土橙）的 Neovim 配色。
+项目结构参照 shaunsingh/nord.nvim（MIT）。
+
+支持 Neovim 内置 LSP 诊断与 TreeSitter（TS* 与 @capture 双命名），
+亮/暗双变体按 vim.o.background 自动切换。
+
+插件支持：
+  gitsigns / gitgutter、telescope、nvim-tree、which-key、nvim-cmp、
+  indent-blankline（新旧命名）、nvim-notify、mini.nvim、dashboard、
+  headlines、illuminate、leap / hop / flash / sneak、rainbow-delimiters、
+  ts-rainbow、aerial、navic、nvim-dap(-ui)、neogit、lsp-trouble、noice、
+  treesitter-context、bufferline、lualine
+
+需求：Neovim >= 0.8（推荐 0.10+）。
+
+==============================================================================
+2. 安装                                            *hucolor.nvim-installation*
+
+lazy.nvim: >
+  { 'huzerovo/hucolor.nvim', lazy = false, priority = 1000 }
+<
+packer.nvim: >
+  use 'huzerovo/hucolor.nvim'
+<
+
+==============================================================================
+3. 使用                                                *hucolor.nvim-usage*
+
+启用配色： >
+  colorscheme hucolor
+<
+亮色模式（可选）： >
+  vim.o.background = 'light'
+  colorscheme hucolor
+<
+
+lualine： >
+  require('lualine').setup { options = { theme = 'hucolor' } }
+<
+
+bufferline： >
+  local highlights = require('hucolor').bufferline.highlights({ italic = true, bold = true })
+  require('bufferline').setup { options = { separator_style = 'thin' }, highlights = highlights }
+<
+
+headlines.nvim： >
+  require('headlines').setup {
+    markdown = {
+      headline_highlights = { 'Headline1', ..., 'Headline6' },
+      codeblock_highlight = 'CodeBlock',
+      dash_highlight = 'Dash',
+      quote_highlight = 'Quote',
+    },
+  }
+<
+
+==============================================================================
+4. 配置                                          *hucolor.nvim-configuration*
+
+                                                       *hucolor_contrast*
+hucolor_contrast        （默认 false）侧栏/浮窗使用 elevated 背景
+                                                       *hucolor_borders*
+hucolor_borders         （默认 false）显示垂直分割线
+                                                   *hucolor_disable_background*
+hucolor_disable_background （默认 false）不设置背景色，用终端背景
+                                        *hucolor_cursorline_transparent*
+hucolor_cursorline_transparent （默认 false）cursorline 背景透明
+                                      *hucolor_enable_sidebar_background*
+hucolor_enable_sidebar_background （默认 false）单独启用侧栏背景
+                                                       *hucolor_italic*
+hucolor_italic          （默认 true）斜体
+                                                         *hucolor_bold*
+hucolor_bold            （默认 true）粗体
+                                          *hucolor_uniform_diff_background*
+hucolor_uniform_diff_background （默认 false）diff 使用统一底色
+
+示例： >
+  vim.g.hucolor_contrast = true
+  vim.g.hucolor_italic = false
+  vim.g.hucolor_uniform_diff_background = true
+  colorscheme hucolor
+<
+
+vim:tw=78:ts=8:noet:ft=help:norl:

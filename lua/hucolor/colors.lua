@@ -1,6 +1,6 @@
--- hulog.nvim · 语义色映射
+-- hucolor.nvim · 语义色映射
 -- 按 vim.o.background 选择暗/亮变体，并处理 sidebar/float/cursorline 等派生角色
-local named = require("hulog.named_colors")
+local named = require("hucolor.named_colors")
 
 local dark_colors = {
 	bg0 = named.bg,
@@ -71,22 +71,22 @@ local light_colors = {
 	none = "NONE",
 }
 
-local hulog = (vim.o.background == "light") and light_colors or dark_colors
+local hucolor = (vim.o.background == "light") and light_colors or dark_colors
 
 -- 侧栏 / 浮窗背景：开启 contrast 时用 elevated，否则与编辑器同底
-if vim.g.hulog_contrast then
-	hulog.sidebar = hulog.bg1
-	hulog.float = hulog.bg1
+if vim.g.hucolor_contrast then
+	hucolor.sidebar = hucolor.bg1
+	hucolor.float = hucolor.bg1
 else
-	hulog.sidebar = hulog.bg0
-	hulog.float = hulog.bg0
+	hucolor.sidebar = hucolor.bg0
+	hucolor.float = hucolor.bg0
 end
 
 -- cursorline：可选透明（回到编辑器底色）
-if vim.g.hulog_cursorline_transparent then
-	hulog.cursorlinefg = hulog.bg0
+if vim.g.hucolor_cursorline_transparent then
+	hucolor.cursorlinefg = hucolor.bg0
 else
-	hulog.cursorlinefg = hulog.bg1
+	hucolor.cursorlinefg = hucolor.bg1
 end
 
-return hulog
+return hucolor

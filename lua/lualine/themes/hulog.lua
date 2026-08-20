@@ -1,49 +1,49 @@
--- hulog.nvim · lualine 主题
--- 用法：require('lualine').setup { options = { theme = 'hulog' } }
-local colors = require("hulog.colors")
+-- hucolor.nvim · lualine 主题
+-- 用法：require('lualine').setup { options = { theme = 'hucolor' } }
+local colors = require("hucolor.colors")
 
-local hulog = {}
+local hucolor = {}
 
-hulog.normal = {
+hucolor.normal = {
 	a = { fg = colors.bg0, bg = colors.blue },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.insert = {
+hucolor.insert = {
 	a = { fg = colors.bg0, bg = colors.green },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.visual = {
+hucolor.visual = {
 	a = { fg = colors.bg0, bg = colors.orange },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.replace = {
+hucolor.replace = {
 	a = { fg = colors.bg0, bg = colors.red },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.command = {
+hucolor.command = {
 	a = { fg = colors.bg0, bg = colors.yellow, gui = "bold" },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.terminal = {
+hucolor.terminal = {
 	a = { fg = colors.bg0, bg = colors.purple },
 	b = { fg = colors.fg1, bg = colors.bg2 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-hulog.inactive = {
+hucolor.inactive = {
 	a = { fg = colors.fg2, bg = colors.bg1, gui = "bold" },
 	b = { fg = colors.fg2, bg = colors.bg0 },
 	c = { fg = colors.fg2, bg = colors.bg1 },
 }
 
-return hulog
+return hucolor
