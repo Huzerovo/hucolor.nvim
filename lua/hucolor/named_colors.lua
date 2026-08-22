@@ -26,7 +26,7 @@ local hucolor = {
 	code_text = "#d0508a", -- --hucolor-code-text 玫红
 	done = "#4cc36a", -- --hucolor-done
 	warn = "#e8a23d", -- --hucolor-warn
-	mark = "#4a3b20", -- --hucolor-mark
+	mark = "#b49153", -- --hucolor-mark
 
 	-- 派生补充（dark）：色板缺失色相
 	red = "#e0554a", -- 独立取值暖红（与亮色 warm 解耦）
@@ -57,7 +57,7 @@ local hucolor = {
 	light_code_text = "#ad3d63", -- 玫红亮色版
 	light_done = "#2e9e44",
 	light_warn = "#d98a00",
-	light_mark = "#f7e8c8",
+	light_mark = "#f8e8b0",
 	light_red = "#c94b3d", -- 派生：亮色无红，取暖红
 	light_cyan = "#2f9eab", -- 派生
 

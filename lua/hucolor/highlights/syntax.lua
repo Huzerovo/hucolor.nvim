@@ -35,21 +35,21 @@ M.load = function()
 		Todo = { fg = hucolor.yellow, bg = hucolor.none, style = style.bold_italic }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		Conceal = { fg = hucolor.none, bg = hucolor.bg0 },
 		htmlLink = { fg = hucolor.green, style = "underline" },
-		markdownH1Delimiter = { fg = hucolor.orange },
+		markdownH1Delimiter = { fg = hucolor.rose },
 		markdownH2Delimiter = { fg = hucolor.yellow },
 		markdownH3Delimiter = { fg = hucolor.green },
-		htmlH1 = { fg = hucolor.orange, style = style.bold },
+		htmlH1 = { fg = hucolor.rose, style = style.bold },
 		htmlH2 = { fg = hucolor.yellow, style = style.bold },
 		htmlH3 = { fg = hucolor.green, style = style.bold },
 		htmlH4 = { fg = hucolor.purple, style = style.bold },
 		htmlH5 = { fg = hucolor.blue, style = style.bold },
-		markdownH1 = { fg = hucolor.orange, style = style.bold },
+		markdownH1 = { fg = hucolor.rose, style = style.bold },
 		markdownH2 = { fg = hucolor.yellow, style = style.bold },
 		markdownH3 = { fg = hucolor.green, style = style.bold },
 		Error = { fg = hucolor.red, bg = hucolor.none, style = style.bold_underline }, -- any erroneous construct with bold
 		Comment = { fg = hucolor.fg2, style = style.italic }, -- italic comments
 		Conditional = { fg = hucolor.blue, style = style.italic }, -- italic if, then, else, endif, switch, etc.
-		Function = { fg = hucolor.orange, style = style.italic }, -- italic function names
+		Function = { fg = hucolor.rose, style = style.italic }, -- italic function names
 		Identifier = { fg = hucolor.fg1, style = style.italic }, -- any variable name
 		Keyword = { fg = hucolor.blue, style = style.italic }, -- italic for, do, while, etc.
 		Repeat = { fg = hucolor.blue, style = style.italic }, -- italic any other keyword

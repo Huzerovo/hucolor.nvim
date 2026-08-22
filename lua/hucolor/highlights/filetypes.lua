@@ -24,8 +24,8 @@ M.load = function()
 		jsonNoise = { fg = hucolor.fg2 },
 
 		-- markdown（非 treesitter 场景）
-		markdownCode = { fg = hucolor.rose },
-		markdownCodeBlock = { fg = hucolor.rose },
+		markdownCode = { fg = hucolor.orange },
+		markdownCodeBlock = { fg = hucolor.orange },
 		markdownLinkText = { fg = hucolor.blue },
 		markdownUrl = { fg = hucolor.green, style = "underline" },
 		markdownItalic = { style = style.italic },

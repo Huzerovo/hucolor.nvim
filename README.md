@@ -18,11 +18,12 @@ Neovim 配色，配色源自 [hucolor](https://github.com/huzerovo/hucolor) 的
 | 文字 强/正文/弱/淡  | `#f1f1f4` `#c9c9cf` `#8e8e97` `#67676f` | `--hucolor-text*`                              |
 | 靛蓝（关键字/类型） | `#a3a4ff` `#d6d7ff`                     | `--hucolor-accent*`                            |
 | 兰花紫（数字/常量） | `#c792ea`                               | `--hucolor-accent-visited`                     |
-| 暖橙（函数/标题）   | `#f0a35e`                               | `--hucolor-warm`                               |
-| 玫红（行内代码）     | `#d0508a`                               | `--hucolor-code-text`                          |
+| 暖橙（行内代码）   | `#f0a35e`                               | `--hucolor-warm`                               |
+| 玫红（函数/标题）   | `#d0508a`                               | `--hucolor-code-text`                          |
 | 绿（字符串/diff+）  | `#4cc36a`                               | `--hucolor-done`                               |
 | 黄（预处理/TODO）   | `#e8a23d`                               | `--hucolor-warn`                               |
 | 红 / 青（派生补充） | `#e0554a` / `#7cc6cf`                   | 色板缺失色相（红独立取值，与亮色 warm 解耦）   |
+| 古金（宏/标注）     | `#b49153` / `#f8e8b0`                   | 色板补充（`<mark>` 高亮）                      |
 
 亮色对应 CSS 亮色变体（`#f7f7f5` 纸底 + `#4a5cd4` 靛蓝 + `#d9582e` 陶土橙）。
 
