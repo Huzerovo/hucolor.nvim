@@ -166,7 +166,7 @@ M.load = function()
 		Headline3 = { fg = hucolor.green, bg = "#27322e", style = style.bold },
 		Headline4 = { fg = hucolor.blue, bg = "#2f2f3c", style = style.bold },
 		Headline5 = { fg = hucolor.purple, bg = "#322d3a", style = style.bold },
-		Headline6 = { fg = hucolor.blue_bright, bg = "#31313c", style = style.bold },
+		Headline6 = { fg = hucolor.blue_bright, bg = "#33333c", style = style.bold },
 		Quote = { fg = hucolor.fg2 },
 		CodeBlock = { bg = hucolor.bg1 },
 		Dash = { fg = hucolor.blue, style = style.bold },

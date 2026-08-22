@@ -16,9 +16,10 @@ Neovim 配色，配色源自 [hucolor](https://github.com/huzerovo/hucolor) 的
 | ------------------- | --------------------------------------- | ---------------------------------------------- |
 | 背景 / 卡片 / 次级  | `#232328` `#2c2c34` `#32323b`           | `--hucolor-bg*` 提亮应用值，bg0 即终端默认背景 |
 | 文字 强/正文/弱/淡  | `#f1f1f4` `#c9c9cf` `#8e8e97` `#67676f` | `--hucolor-text*`                              |
-| 靛蓝（关键字/类型） | `#a3a4ff` `#b9baff`                     | `--hucolor-accent*`                            |
+| 靛蓝（关键字/类型） | `#a3a4ff` `#d6d7ff`                     | `--hucolor-accent*`                            |
 | 兰花紫（数字/常量） | `#c792ea`                               | `--hucolor-accent-visited`                     |
 | 暖橙（函数/标题）   | `#f0a35e`                               | `--hucolor-warm`                               |
+| 玫红（行内代码）     | `#d0508a`                               | `--hucolor-code-text`                          |
 | 绿（字符串/diff+）  | `#4cc36a`                               | `--hucolor-done`                               |
 | 黄（预处理/TODO）   | `#e8a23d`                               | `--hucolor-warn`                               |
 | 红 / 青（派生补充） | `#e0554a` / `#7cc6cf`                   | 色板缺失色相（红独立取值，与亮色 warm 解耦）   |

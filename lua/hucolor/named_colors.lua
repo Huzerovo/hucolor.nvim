@@ -18,12 +18,12 @@ local hucolor = {
 
 	-- 强调色（dark）
 	accent = "#a3a4ff", -- --hucolor-accent 靛蓝
-	accent_strong = "#b9baff", -- --hucolor-accent-strong
+	accent_strong = "#d6d7ff", -- --hucolor-accent-strong（明显提亮，与主色拉开对比）
 	accent_visited = "#c792ea", -- --hucolor-accent-visited 兰花紫
 	warm = "#f0a35e", -- --hucolor-warm 暖橙
 
 	-- 语义色（dark）
-	code_text = "#d08a50", -- --hucolor-code-text 锈橙
+	code_text = "#d0508a", -- --hucolor-code-text 玫红
 	done = "#4cc36a", -- --hucolor-done
 	warn = "#e8a23d", -- --hucolor-warn
 	mark = "#4a3b20", -- --hucolor-mark
@@ -36,7 +36,6 @@ local hucolor = {
 	black = "#5a5a64",
 	bright_black = "#64646e",
 	bright_green = "#6fd98a",
-	bright_yellow = "#f0b45a",
 	bright_purple = "#d8b4f2",
 	bright_cyan = "#a5dae0",
 	white = "#ffffff",
@@ -52,10 +51,10 @@ local hucolor = {
 	light_text_muted = "#6d6d6d",
 	light_text_faint = "#9b9b9b",
 	light_accent = "#4a5cd4",
-	light_accent_strong = "#3d4fc4",
+	light_accent_strong = "#2f3fae", -- 明显加深，与亮色主色拉开对比
 	light_accent_visited = "#7d6fb8",
 	light_warm = "#d9582e",
-	light_code_text = "#9a4f1f",
+	light_code_text = "#ad3d63", -- 玫红亮色版
 	light_done = "#2e9e44",
 	light_warn = "#d98a00",
 	light_mark = "#f7e8c8",
